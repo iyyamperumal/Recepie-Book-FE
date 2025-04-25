@@ -1,0 +1,103 @@
+[
+    {
+      "title": "Spaghetti Bolognese",
+      "image": "spaghetti.jpg",
+      "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onion", "Garlic"],
+      "instructions": "Cook spaghetti. In another pan, sauté onions and garlic, add beef and cook thoroughly. Mix with tomato sauce. Serve hot.",
+      "category": "Italian",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 4
+    },
+    {
+      "title": "Chicken Curry",
+      "image": "chicken-curry.jpg",
+      "ingredients": ["Chicken", "Onion", "Tomato", "Yogurt", "Spices"],
+      "instructions": "Cook chicken with onions and spices. Add tomato and yogurt. Simmer until chicken is cooked.",
+      "category": "Indian",
+      "prepTime": 20,
+      "cookTime": 40,
+      "servings": 4
+    },
+    {
+      "title": "Vegetable Stir Fry",
+      "image": "veggie-stirfry.jpg",
+      "ingredients": ["Mixed Vegetables", "Soy Sauce", "Garlic", "Ginger"],
+      "instructions": "Stir-fry vegetables in hot oil. Add garlic, ginger, and soy sauce. Cook for a few minutes and serve.",
+      "category": "Asian",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 2
+    },
+    {
+      "title": "Chocolate Cake",
+      "image": "chocolate-cake.jpg",
+      "ingredients": ["Flour", "Cocoa Powder", "Eggs", "Butter", "Sugar"],
+      "instructions": "Mix ingredients, pour into a baking tin, and bake at 350°F (175°C) for 30 minutes.",
+      "category": "Dessert",
+      "prepTime": 20,
+      "cookTime": 30,
+      "servings": 8
+    },
+    {
+      "title": "Caesar Salad",
+      "image": "caesar-salad.jpg",
+      "ingredients": ["Romaine Lettuce", "Croutons", "Parmesan", "Caesar Dressing"],
+      "instructions": "Mix lettuce, croutons, and parmesan with Caesar dressing. Serve chilled.",
+      "category": "Salad",
+      "prepTime": 10,
+      "cookTime": 0,
+      "servings": 2
+    },
+    {
+      "title": "Grilled Cheese Sandwich",
+      "image": "grilled-cheese.jpg",
+      "ingredients": ["Bread", "Cheddar Cheese", "Butter"],
+      "instructions": "Butter bread, place cheese between slices, and grill until golden brown.",
+      "category": "Snack",
+      "prepTime": 5,
+      "cookTime": 5,
+      "servings": 1
+    },
+    {
+      "title": "Beef Stew",
+      "image": "beef-stew.jpg",
+      "ingredients": ["Beef", "Carrots", "Potatoes", "Onion", "Broth"],
+      "instructions": "Cook beef in pot, add vegetables and broth. Simmer for 2 hours until tender.",
+      "category": "Main Course",
+      "prepTime": 25,
+      "cookTime": 120,
+      "servings": 6
+    },
+    {
+      "title": "Fish Tacos",
+      "image": "fish-tacos.jpg",
+      "ingredients": ["Fish Fillets", "Tortillas", "Cabbage", "Lime", "Sour Cream"],
+      "instructions": "Grill fish, serve in tortillas with cabbage and lime. Add sour cream if desired.",
+      "category": "Mexican",
+      "prepTime": 15,
+      "cookTime": 10,
+      "servings": 4
+    },
+    {
+      "title": "Pancakes",
+      "image": "pancakes.jpg",
+      "ingredients": ["Flour", "Milk", "Eggs", "Baking Powder", "Sugar"],
+      "instructions": "Mix ingredients, pour batter on griddle, flip when bubbles form. Serve with syrup.",
+      "category": "Breakfast",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 4
+    },
+    {
+      "title": "Fried Rice",
+      "image": "fried-rice.jpg",
+      "ingredients": ["Rice", "Vegetables", "Soy Sauce", "Eggs"],
+      "instructions": "Stir-fry vegetables, add cooked rice and soy sauce. Push aside, scramble eggs, then mix all.",
+      "category": "Chinese",
+      "prepTime": 10,
+      "cookTime": 15,
+      "servings": 3
+    }
+  ]
+  
