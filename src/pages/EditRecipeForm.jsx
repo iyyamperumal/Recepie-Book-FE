@@ -5,6 +5,7 @@ import axios from "axios";
 const EditRecipeForm = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const apiUrl = "https://recepie-book-be-2.onrender.com";
 
   const [recipe, setRecipe] = useState({
     title: "",
@@ -15,7 +16,7 @@ const EditRecipeForm = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/recipes/${id}`)
+      .get(`${apiUrl}/api/recipes/${id}`)
       .then((res) => {
         setRecipe(res.data);
       })
@@ -33,7 +34,7 @@ const EditRecipeForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/recipes/${id}`, recipe)
+      .put(`${apiUrl}/api/recipes/${id}`, recipe)
       .then(() => {
         alert("Recipe updated!");
         navigate(`/recipe/${id}`);

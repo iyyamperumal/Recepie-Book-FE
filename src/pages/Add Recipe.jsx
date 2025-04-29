@@ -5,30 +5,33 @@ const AddRecipe = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [ingredients, setIngredients] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState("");
   const navigate = useNavigate();
+  const apiUrl = "https://recepie-book-be-2.onrender.com";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const formData = new FormData();
-    formData.append("title", title);
-    formData.append("description", description);
-    formData.append("ingredients", ingredients);
-    if (image) {
-      formData.append("image", image);
-    }
-
+  
+    const recipeData = {
+      title,
+      description,
+      ingredients,
+      image,
+    };
+  
     try {
-      const response = await fetch("http://localhost:5000/api/recipes", {
+      const response = await fetch(`${apiUrl}/api/recipes`, {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(recipeData),
       });
-
+  
       if (!response.ok) {
         throw new Error("Failed to submit recipe");
       }
-
+  
       alert("Recipe added successfully!");
       navigate("/");
     } catch (error) {
@@ -47,6 +50,7 @@ const AddRecipe = () => {
           <input
             type="text"
             className="w-full border border-gray-300 px-3 py-2 rounded"
+            placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
@@ -57,6 +61,7 @@ const AddRecipe = () => {
           <label className="block mb-1 font-medium">Description</label>
           <textarea
             className="w-full border border-gray-300 px-3 py-2 rounded"
+            placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
@@ -68,6 +73,7 @@ const AddRecipe = () => {
           <input
             type="text"
             className="w-full border border-gray-300 px-3 py-2 rounded"
+            placeholder="Ingredient,etc..."
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
             required
@@ -77,9 +83,10 @@ const AddRecipe = () => {
         <div>
           <label className="block mb-1 font-medium">Image</label>
           <input
-            type="file"
-            className="w-full"
-            onChange={(e) => setImage(e.target.files[0])}
+            type="text"
+            className="w-full border border-gray-300 px-3 py-2 rounded"
+            placeholder="Image URL"
+            onChange={(e) => setImage(e.target.value)}
           />
         </div>
         <div className="flex gap-4">

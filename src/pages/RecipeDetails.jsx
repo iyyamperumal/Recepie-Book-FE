@@ -6,10 +6,10 @@ const RecipeDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [recipe, setRecipe] = useState(null);
-
+  const apiUrl = "https://recepie-book-be-2.onrender.com";
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/recipes/${id}`)
+      .get(`${apiUrl}/api/recipes/${id}`)
       .then((response) => {
         setRecipe(response.data);
       })
@@ -23,7 +23,7 @@ const RecipeDetails = () => {
     if (!confirm) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/recipes/${id}`);
+      await axios.delete(`${apiUrl}/api/recipes/${id}`);
       alert("Recipe deleted successfully!");
       navigate("/");
     } catch (error) {

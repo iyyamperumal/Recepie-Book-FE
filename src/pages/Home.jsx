@@ -6,10 +6,10 @@ const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const apiUrl = "https://recepie-book-be-2.onrender.com";
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/recipes", { timeout: 5000 })
+      .get(`${apiUrl}/api/recipes`, { timeout: 5000 })
       .then((response) => {
         setRecipes(response.data);
         setLoading(false);
